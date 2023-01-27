@@ -850,6 +850,7 @@ and (orientation: landscape) {
 
     .jack {
         bottom: 85px;
+        display: none;
     }
 }
 
