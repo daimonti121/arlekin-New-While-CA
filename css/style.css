@@ -852,6 +852,9 @@ and (orientation: landscape) {
         bottom: 85px;
         display: none;
     }
+    .gonzo {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
