@@ -857,7 +857,7 @@ and (orientation: landscape) {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) and (max-height: 600px) {
     .game-person {
         display: none;
     }
