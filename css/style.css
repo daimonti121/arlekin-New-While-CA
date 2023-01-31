@@ -27,10 +27,10 @@ body {
     color: #222;
     background: #fff;
     font-family: 'KelsonSans-RegularRU', "Helvetica Neue LT Cyrillic Condensed", "Arial Narrow", sans-serif;
-    -ms-user-select: none; 
-    -moz-user-select: none; 
-    -webkit-user-select: none; 
-    user-select: none; 
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 ol, ul {
@@ -510,6 +510,8 @@ html {
 }
 
 .wheel__spinner-holder {
+    display: flex;
+    justify-content: center;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -533,8 +535,7 @@ html {
 }
 
 .wheel__spinner {
-    width: -webkit-fill-available;
-    width: 100%;
+    width: auto;
     vertical-align: top;
     position: relative;
     z-index: 3;
@@ -751,7 +752,7 @@ p.popup_grey_info a {
     cursor: pointer;
     display: block;
     max-width: 222px;
-    margin: 0 auto; 
+    margin: 0 auto;
 } */
 
 .popup__win-btn {
@@ -951,9 +952,6 @@ and (orientation: portrait) {
         display: none;
     }
 
-    .wheel__spinner {
-        height: auto;
-    }
 
     .jack {
         bottom: 70px;
@@ -1225,11 +1223,9 @@ and (orientation: landscape) {
 }
 
 @media (max-width: 550px) {
-
     .wheel__spinner {
+        width: 100%;
         height: auto;
-        width: 120%;
-        left: -10%;
         display: block;
         margin: 0 auto;
     }
@@ -1259,7 +1255,6 @@ and (orientation: landscape) {
     .wheel__spinner {
         height: auto;
         width: 140%;
-        left: -20%;
     }
 
     .achievements__item {
@@ -1553,7 +1548,7 @@ and (orientation: landscape) {
         max-width: 450px;
     }
 
-    
+
 
 }
 
@@ -1563,7 +1558,7 @@ and (orientation: landscape) {
             -ms-transform: scale(0.65);
                 transform: scale(0.65);
     }
-    
+
 }
 
 
@@ -1578,7 +1573,7 @@ and (orientation: portrait) {
 
     .logo__img {
         /* height: 20px; */
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 }
 
