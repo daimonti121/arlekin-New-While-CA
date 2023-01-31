@@ -10,6 +10,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline
 }
 
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url("../fonts/GothamPro-Bold.woff") format("woff");
+}
+
 body {
     line-height: 1;
     color: #222;
@@ -463,6 +468,8 @@ html {
     position: relative;
 }
 
+
+
 @media screen and (min-width: 0\0
 ) {
     .wheel__spinner-holder {
@@ -568,32 +575,55 @@ html {
     position: relative;
     box-sizing: border-box;
     text-align: center;
-    background: #eef0f3;
     padding: 0 0 30px;
     color: #8b8b8b;
     border-radius: 6px;
-    border: 4px solid #ff2929;
-    background-color: rgba(0, 0, 0, 1);
-    background-image: none;
-    width: 550px;
+    background: url("../img/modal-2.png") 50% 100%/cover no-repeat;
+    max-width: 650px;
+    height: 640px;
+    width: 100%;
+    padding: 40px;
 }
 
-.popup__title {
-    font-size: 38px;
-    margin-bottom: 26px;
-    line-height: 40px;
+
+.popup h2 {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 53.8251px rgba(255, 41, 41, 0.4), 0px 4px 0px rgba(0, 0, 0, 0.7);
 }
 
-.popup__accent {
-    color: #fff;
-    font-weight: bold;
-    font-family: 'KelsonSans-BoldRU', "Helvetica Neue LT Cyrillic Condensed", "Arial Narrow", sans-serif;
-    text-shadow: 2px 2px 0px #7F5500;
-    display: block;
-    padding: 25px 70px 0px 70px;
-    /* background: #1b47a1; */
-    position: relative;
-    line-height: 1.25;
+.popup .text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 53.8251px rgba(255, 41, 41, 0.4), 0px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+.popup .btn {
+    max-width: 180px;
+    text-align: center;
+    background: #FE3737;
+    box-shadow: 0px 0px 70px rgb(254 55 55 / 70%), inset 4px 4px 15px rgb(255 255 255 / 25%);
+    border-radius: 54px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 15px;
 }
 
 .popup__accent:after {
@@ -944,6 +974,11 @@ and (orientation: landscape) {
         max-width: 95%;
         padding-bottom: 14px;
         margin: 0 auto;
+        padding: 30px 20px 0px;
+    }
+
+    .popup .text {
+        font-size: 20px;
     }
 
     .popup__title {
@@ -1400,6 +1435,8 @@ and (orientation: landscape) {
         padding-bottom: 11px;
         max-width: 450px;
     }
+
+    
 
 }
 
