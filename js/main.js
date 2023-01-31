@@ -66,9 +66,6 @@ window.onload = function () {
     //         break;
     // }
 
-
-
-
 };
 
 function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}

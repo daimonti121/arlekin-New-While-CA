@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     margin: 0;
     padding: 0;
@@ -90,7 +97,8 @@ a img {
     color: #612901;
     text-transform: uppercase;
     text-shadow: 0 1px 0 #fde02e, 0 0 9px rgba(136, 142, 130, 0.4);
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 5px 18px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     text-decoration: none;
     position: absolute;
@@ -101,7 +109,8 @@ a img {
 }
 
 .button:hover {
-    box-shadow: 0 0 16px rgba(253, 224, 46, 0.75), 0 5px 18px rgba(0, 0, 0, 0.75)
+    -webkit-box-shadow: 0 0 16px rgba(253, 224, 46, 0.75), 0 5px 18px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 16px rgba(253, 224, 46, 0.75), 0 5px 18px rgba(0, 0, 0, 0.75)
 }
 
 .button:active {
@@ -164,9 +173,11 @@ a img {
 
 .achievements_inline {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     max-width: 100%
 }
 
@@ -175,7 +186,8 @@ a img {
 }
 
 .achievements__item_animated {
-    animation: .5s pop
+    -webkit-animation: .5s pop;
+            animation: .5s pop
 }
 
 .achievements__img {
@@ -220,15 +232,33 @@ a img {
     background-position: 0 -100px;
 }
 
-@keyframes pop {
+@-webkit-keyframes pop {
     0% {
-        transform: scale(0)
+        -webkit-transform: scale(0);
+                transform: scale(0)
     }
     50% {
-        transform: scale(1.2)
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2)
     }
     100% {
-        transform: scale(1)
+        -webkit-transform: scale(1);
+                transform: scale(1)
+    }
+}
+
+@keyframes pop {
+    0% {
+        -webkit-transform: scale(0);
+                transform: scale(0)
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2)
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1)
     }
 }
 
@@ -242,10 +272,13 @@ a img {
     z-index: 10;
     display: none;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    box-sizing: border-box;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -253,7 +286,8 @@ a img {
 .fewmodal__body {
     display: none;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     position: relative;
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
@@ -353,9 +387,11 @@ html {
 
 .game-layout__body {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     padding-top: 0;
 }
 
@@ -370,6 +406,7 @@ html {
     left: 0;
     top: 0;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -383,14 +420,18 @@ html {
 
 .game-mask__column {
     -ms-flex-positive: 1;
-    flex-grow: 1
+    -webkit-box-flex: 1;
+            flex-grow: 1
 }
 
 .game-mask__column_fixed {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     max-width: 243px;
     min-width: 243px;
     background: transparent;
@@ -402,7 +443,8 @@ html {
 
 .game-mask__bot {
     -ms-flex: 1;
-    flex: 1
+    -webkit-box-flex: 1;
+            flex: 1
 }
 
 .game-mask__main {
@@ -421,7 +463,8 @@ html {
     height: 100%;
     background: url("../img/wheel-win-frame_active.png") 50% 0 no-repeat;
     background-size: 100% auto;
-    animation: 2.6s blink ease-in-out infinite
+    -webkit-animation: 2.6s blink ease-in-out infinite;
+            animation: 2.6s blink ease-in-out infinite
 }
 
 .game-mask__text {
@@ -437,9 +480,15 @@ html {
 .wheel {
     position: relative;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-size: contain;
     top: 0;
     margin-bottom: 100px;
@@ -456,7 +505,8 @@ html {
 }
 
 .wheel_animated:after {
-    animation: 2s spinner ease-in-out infinite;
+    -webkit-animation: 2s spinner ease-in-out infinite;
+            animation: 2s spinner ease-in-out infinite;
 }
 
 .wheel__spinner-holder {
@@ -483,6 +533,7 @@ html {
 }
 
 .wheel__spinner {
+    width: -webkit-fill-available;
     width: 100%;
     vertical-align: top;
     position: relative;
@@ -491,7 +542,8 @@ html {
 }
 
 .wheel__spinner_animated {
-    animation: 2s spinner ease-in-out infinite;
+    -webkit-animation: 2s spinner ease-in-out infinite;
+            animation: 2s spinner ease-in-out infinite;
 }
 
 .wheel__mask {
@@ -513,11 +565,14 @@ html {
     bottom: 0;
     z-index: 4;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     margin: auto;
     width: 180px;
     height: 190px;
@@ -526,9 +581,15 @@ html {
 .wheel__button-pointer {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     z-index: 5;
     -webkit-tap-highlight-color: transparent;
@@ -573,7 +634,8 @@ html {
 
 .popup {
     position: relative;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
     padding: 0 0 30px;
     color: #8b8b8b;
@@ -610,11 +672,17 @@ html {
     text-shadow: 0px 0px 53.8251px rgba(255, 41, 41, 0.4), 0px 4px 0px rgba(0, 0, 0, 0.7);
 }
 
+.popup .text span {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 25px #FE3737, 0px 0px 25px #FE3737, 0px 0px 53.8251px rgba(255, 41, 41, 0.4), 0px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
 .popup .btn {
     max-width: 180px;
     text-align: center;
     background: #FE3737;
-    box-shadow: 0px 0px 70px rgb(254 55 55 / 70%), inset 4px 4px 15px rgb(255 255 255 / 25%);
+    -webkit-box-shadow: 0px 0px 70px rgb(254 55 55 / 70%), inset 4px 4px 15px rgb(255 255 255 / 25%);
+            box-shadow: 0px 0px 70px rgb(254 55 55 / 70%), inset 4px 4px 15px rgb(255 255 255 / 25%);
     border-radius: 54px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -694,6 +762,8 @@ p.popup_grey_info a {
     font-family: 'KelsonSans-BoldRU', "Helvetica Neue LT Cyrillic Condensed", "Arial Narrow", sans-serif;
     padding: 16px 50px 12px 50px;
     line-height: 27px;
+    -webkit-transition: .3s linear;
+    -o-transition: .3s linear;
     transition: .3s linear;
     cursor: pointer;
     display: block;
@@ -766,7 +836,8 @@ img.popup-icon {
     padding: 0 25px;
     width: 100%;
     height: 52px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border: 1px solid rgba(189, 244, 0, 0.67);
     border-radius: 10px;
     background-color: #1f1116;
@@ -804,15 +875,45 @@ img.popup-icon {
     margin-bottom: 12px;
 }
 
-@keyframes spinner {
+@-webkit-keyframes spinner {
     0% {
-        transform: rotate(-3deg)
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg)
     }
     50% {
-        transform: rotate(3deg)
+        -webkit-transform: rotate(3deg);
+                transform: rotate(3deg)
     }
     100% {
-        transform: rotate(-3deg)
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg)
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg)
+    }
+    50% {
+        -webkit-transform: rotate(3deg);
+                transform: rotate(3deg)
+    }
+    100% {
+        -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg)
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
     }
 }
 
@@ -932,7 +1033,9 @@ and (orientation: landscape) {
 
     .circle-button {
         font-size: 20px;
-        transform: scale(0.65);
+        -webkit-transform: scale(0.65);
+            -ms-transform: scale(0.65);
+                transform: scale(0.65);
         background-position: -6px -10px;
         line-height: 132px;
     }
@@ -1089,7 +1192,9 @@ and (orientation: landscape) {
     .wheel__button-holder {
         width: 115px;
         height: 115px;
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
 
     .wheel__button-pointer:after {
@@ -1106,7 +1211,9 @@ and (orientation: landscape) {
     }
 
     .fewmodal {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
     }
 
@@ -1172,7 +1279,9 @@ and (orientation: landscape) {
 
     .circle-button {
         font-size: 20px;
-        transform: scale(0.65);
+        -webkit-transform: scale(0.65);
+            -ms-transform: scale(0.65);
+                transform: scale(0.65);
         background-position: -6px -10px;
         line-height: 132px;
     }
@@ -1324,7 +1433,9 @@ and (orientation: landscape) {
     .wheel__button-holder {
         width: 115px;
         height: 115px;
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
 
     .wheel__button-pointer:after {
@@ -1341,7 +1452,9 @@ and (orientation: landscape) {
     }
 
     .fewmodal {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
     }
 
@@ -1376,7 +1489,9 @@ and (orientation: landscape) {
     }
 
     .wheel__button-holder {
-        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+                transform: scale(0.5);
     }
 
     .page__footer {
@@ -1396,7 +1511,9 @@ and (orientation: landscape) {
     }
 
     .wheel__button-pointer {
-        transform: scale(0.85);
+        -webkit-transform: scale(0.85);
+            -ms-transform: scale(0.85);
+                transform: scale(0.85);
     }
 
     .popup__title {
@@ -1442,7 +1559,9 @@ and (orientation: landscape) {
 
 @media (max-width: 740px) and (orientation: landscape) {
     .wheel__button-holder {
-        transform: scale(0.65);
+        -webkit-transform: scale(0.65);
+            -ms-transform: scale(0.65);
+                transform: scale(0.65);
     }
     
 }
@@ -1468,7 +1587,9 @@ and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (orientation: landscape) {
     .fewmodal__body {
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
     }
 
@@ -1548,66 +1669,123 @@ and (orientation: landscape) {
 
 
 .wheel__spinner_animated {
-    animation: 5s spinner ease-in-out infinite
+    -webkit-animation: 5s spinner ease-in-out infinite;
+            animation: 5s spinner ease-in-out infinite
 }
 .wheel__spinner_animated-1 {
-    animation: 5s spinToOne ease-in-out 1;
+    -webkit-animation: 5s spinToOne ease-in-out 1;
+            animation: 5s spinToOne ease-in-out 1;
 }
 .wheel__spinner_animated-2 {
-    animation: 3.5s spinToTwo ease-in-out 1 forwards;
+    -webkit-animation: 3.5s spinToTwo ease-in-out 1 forwards;
+            animation: 3.5s spinToTwo ease-in-out 1 forwards;
 }
 .wheel__spinner_animated-3 {
-    animation:  3.5s spinToThree ease-in-out 1 forwards;
+    -webkit-animation:  3.5s spinToThree ease-in-out 1 forwards;
+            animation:  3.5s spinToThree ease-in-out 1 forwards;
+}
+@-webkit-keyframes spinToOne {
+    0% {
+        -webkit-transform: rotate(-80deg);
+                transform: rotate(-80deg);
+    }
+    70% {
+        -webkit-transform: rotate(1063deg);
+                transform: rotate(1063deg);
+    }
+    80% {
+        -webkit-transform: rotate(1054deg);
+                transform: rotate(1054deg);
+    }
+    100% {
+        -webkit-transform: rotate(1060deg);
+                transform: rotate(1060deg);
+    }
 }
 @keyframes spinToOne {
     0% {
-        transform: rotate(-80deg);
+        -webkit-transform: rotate(-80deg);
+                transform: rotate(-80deg);
     }
     70% {
-        transform: rotate(1063deg);
+        -webkit-transform: rotate(1063deg);
+                transform: rotate(1063deg);
     }
     80% {
-        transform: rotate(1054deg);
+        -webkit-transform: rotate(1054deg);
+                transform: rotate(1054deg);
     }
     100% {
-        transform: rotate(1060deg);
+        -webkit-transform: rotate(1060deg);
+                transform: rotate(1060deg);
     }
 }
-@keyframes spinToTwo {
+@-webkit-keyframes spinToTwo {
     0% {
-        transform: rotate(-80deg);
+        -webkit-transform: rotate(-80deg);
+                transform: rotate(-80deg);
     }
     /* 70% {
         transform: rotate(875deg);
     } */
 
     80% {
-        transform: rotate(1873deg);
+        -webkit-transform: rotate(1873deg);
+                transform: rotate(1873deg);
     }
 
     90% {
-        transform: rotate(1864deg);
+        -webkit-transform: rotate(1864deg);
+                transform: rotate(1864deg);
     }
 
     100% {
-        transform: rotate(1870deg);
+        -webkit-transform: rotate(1870deg);
+                transform: rotate(1870deg);
+    }
+}
+@keyframes spinToTwo {
+    0% {
+        -webkit-transform: rotate(-80deg);
+                transform: rotate(-80deg);
+    }
+    /* 70% {
+        transform: rotate(875deg);
+    } */
+
+    80% {
+        -webkit-transform: rotate(1873deg);
+                transform: rotate(1873deg);
+    }
+
+    90% {
+        -webkit-transform: rotate(1864deg);
+                transform: rotate(1864deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(1870deg);
+                transform: rotate(1870deg);
     }
 }
 @keyframes spinner {
     0% {
         transform: rotate(993deg) translateZ(1000px);
         -webkit-transform: rotate(993deg) translateZ(1000px);
-        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
     }
     50% {
         transform: rotate(990deg) translateZ(1000px);
         -webkit-transform: rotate(990deg) translateZ(1000px);
-        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
     }
     100% {
         transform: rotate(993deg) translateZ(1000px);
         -webkit-transform: rotate(993deg) translateZ(1000px);
-        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
     }
 }
 
@@ -1620,5 +1798,6 @@ and (orientation: landscape) {
 }
 
 ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 6px #ff2929;
+    -webkit-box-shadow: inset 0 0 6px #ff2929;
+            box-shadow: inset 0 0 6px #ff2929;
 }
