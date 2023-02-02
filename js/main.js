@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var button = document.querySelector('.spin-trigger');
     button.onclick = function () {
@@ -18,29 +17,6 @@ window.onload = function () {
         }, 4000);
     }
 
-    // function spin_1 () {
-    //     $('.wheel__button').attr('disabled','disabled');
-    //     document.querySelector('.wheel__spinner').classList.add('wheel__spinner_animated-1');
-    //     setTimeout(function () {
-    //         localStorage.currentSpin = '20020_spin_1';
-    //         document.querySelector('.wheel__spinner').classList.remove('wheel__spinner_animated-1');
-    //         $('.fewmodal').css('display','flex');
-    //         $('#level-1').css('display','flex');
-    //         $('.circle-button').removeClass('first_spin');
-    //     }, 4000);
-    // }
-
-    // function spin_2 () {
-    //     $('.wheel__button').attr('disabled','disabled');
-    //     document.querySelector('.wheel__spinner').classList.add('wheel__spinner_animated-2');
-    //     setTimeout(function () {
-    //         localStorage.currentSpin = '20020_spin_2';
-    //         $('.fewmodal').css('display','flex');
-    //         $('#level-2').css('display','flex');
-    //     }, 4000);
-    // }
-
-
     $('#popup_btn_1').click(function () {
         $('.fewmodal').css('display','none');
         $('#level-1').css('display','none');
@@ -52,27 +28,20 @@ window.onload = function () {
 
 
     // switch(localStorage.currentSpin) {
-    //     case '20020_spin_1':
-    //         $('.fewmodal').css('display','flex');
-    //         $('#level-1').css('display','flex');
-    //         $('.circle-button').addClass('second_spin').removeClass('first_spin');
-    //         break;
 
     //     case '20020_spin_2':
-    //         $('.fewmodal').css('display','flex');
-    //         $('#level-1').css('display','none');
-    //         $('#level-2').css('display','flex');
-    //         $('.circle-button').removeClass('second_spin').removeClass('first_spin');
+    //         document.getElementById("body").style.display = "none";
+    //         // window.location.href = 'https://arlekincasino.net/en-CA/users/sign_up' + stag;
     //         break;
     // }
 
+    function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}
+    var getStag = $_GET("stag", window.location.href);
+    var stag = "?stag=" + getStag;
+    console.log("STAG -" + stag);
+
+    $('.popup__win-btn').click(function(){     
+        window.location.href = 'https://arlekincasino.net/en-CA/users/sign_up' + stag;
+    })
+
 };
-
-function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}
-var getStag = $_GET("stag", window.location.href);
-var stag = "?stag=" + getStag;
-console.log("STAG -" + stag);
-
-$('.popup__win-btn').click(function(){     
-    window.location.href = 'https://arlekincasino.net/en-CA/users/sign_up' + stag;
-})
