@@ -38,9 +38,9 @@ window.onload = function () {
     function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}
     var getStag = $_GET("stag", window.location.href);
     var stag = "?stag=" + getStag;
-    console.log("STAG -" + stag);
+    console.log("STAG - " + stag);
 
-    $('.popup__win-btn').click(function(){     
+    $('.popup__win-btn').click(function(){
         window.location.href = 'https://arlekincasino.net/en-CA/users/sign_up' + stag;
     })
 
