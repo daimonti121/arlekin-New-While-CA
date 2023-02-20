@@ -40,7 +40,9 @@ window.onload = function () {
     var stag = "?stag=" + getStag;
     console.log("STAG - " + stag);
 
-    $('.popup__win-btn').click(function(){
+    $('.popup__win-btn').click(function(event){
+        event.preventDefault();
+        event.stopImmediatePropagation();
         window.location.href = 'https://arlekincasino.net/en-CA/users/sign_up' + stag;
     })
 
